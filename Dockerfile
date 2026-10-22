@@ -86,8 +86,8 @@ RUN chmod +x ./${SCOPE}-entrypoint.sh
 USER node
 ENTRYPOINT ./${SCOPE}-entrypoint.sh
 
-EXPOSE 3000
-ENV PORT=3000
+EXPOSE 10000
+ENV PORT=10000
 
 FROM release-base AS release-viewer
 
