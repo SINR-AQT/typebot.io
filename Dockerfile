@@ -67,8 +67,8 @@ ARG SCOPE
 COPY . .
 RUN cd packages/env && bun run compile && bunx nx db:generate prisma
 RUN bunx nx sync
-RUN SKIP_ENV_CHECK=true DATABASE_URL=postgresql:// NEXT_PUBLIC_VIEWER_URL=http://localhost bunx nx build ${SCOPE}
-RUN DATABASE_URL=postgresql:// bunx nx db:generate prisma
+RUN SKIP_ENV_CHECK=true DATABASE_URL=postgresql://admin:NUSIiojnrahg1IdLmJHaftKbLjEJ2waN@dpg-dbd104ks728c738h5iqg-a/typebot_hkcr NEXT_PUBLIC_VIEWER_URL=https://meu-typebot-01xl.onrender.com bunx nx build ${SCOPE}
+RUN DATABASE_URL=postgresql://admin:NUSIiojnrahg1IdLmJHaftKbLjEJ2waN@dpg-dbd104ks728c738h5iqg-a/typebot_hkcr bunx nx db:generate prisma
 
 # ================== RELEASE ======================
 
